@@ -10,7 +10,7 @@ public class DisplayGeometricTypes {
             System.out.println("Enter your choice:\n" +
                     "1.Print the rectangle\n" +
                     "2.Print the square triangle (The corner is square at 4 different angles: top-left, top-right, botton-left, botton-right)\n" +
-                    "3.Print isosceles triangle\n" +
+                    "3.Print isosceles triangleisosceles triangle\n" +
                     "Exit");
             choice = Integer.parseInt(scanner.nextLine());
             switch (choice) {
@@ -20,12 +20,15 @@ public class DisplayGeometricTypes {
                 case 2:
                     squareTriangle();
                     break;
+                case 3:
+                case 4:
+                    System.exit(0);
+                    break;
             }
 
         }
     }
 
-    //
     public static void rectangle() {
 
         for (int i = 0; i < 5; i++) {
@@ -50,27 +53,75 @@ public class DisplayGeometricTypes {
 
             switch (choice) {
                 case 1:
+                    System.out.println("Triangle top-left");
                     topLeft();
+                    break;
+                case 2:
+                    System.out.println("Triangle top-right");
+                    topRight();
+                    break;
                 case 3:
+                    System.out.println("Triangle botton-left");
                     bottonLeft();
+                    break;
+                case 4:
+                    System.out.println("Triangle botton-right");
+                    bottonRight();
                     break;
             }
         } while (check);
     }
-    public static void topLeft(){
-        for (int i=7;i<0;i--){
-            for (int j=0;j<i;j++){
+
+    public static void topLeft() {
+        for (int i = 1; i < 6; i++) {
+
+            for (int j = i; j < 6; j++) {
+                System.out.print("*");
+            }
+            System.out.println("");
+        }
+    }
+
+
+
+    public static void topRight() {
+        for (int i = 1; i < 6; i++) {
+            for (int j = 1; j < i; j++) {
+                System.out.print(" ");
+            }
+            for (int j = i; j < 6; j++) {
                 System.out.print("*");
             }
             System.out.println("");
         }
     }
     public static void bottonLeft() {
-        for (int i = 0; i < 5; i++) {
-            for (int j = 0; j < i; j++) {
+        for (int i = 1; i < 6; i++) {
+
+            for (int j = 1; j <= i; j++) {
                 System.out.print("*");
             }
-            System.out.println("*");
+            System.out.println("");
+        }
+    }
+    public static void bottonRight() {
+        for (int i = 1; i < 6; i++) {
+
+            for (int j = i + 1; j < 6; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println("");
+        }
+    }
+    public static void isoscelesTriangle(){
+        for (int i=1;i<7;i++){
+            for (int j=i;j<i;j++){
+                System.out.print("*");
+
+            }
         }
     }
 }
