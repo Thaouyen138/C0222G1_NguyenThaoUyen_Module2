@@ -7,11 +7,12 @@ public class DisplayGeometricTypes {
         Scanner scanner = new Scanner(System.in);
         int choice = -1;
         while (choice != 0) {
-            System.out.println("Enter your choice:\n" +
+            System.out.println("Types of geometric\n" +
                     "1.Print the rectangle\n" +
                     "2.Print the square triangle (The corner is square at 4 different angles: top-left, top-right, botton-left, botton-right)\n" +
                     "3.Print isosceles triangleisosceles triangle\n" +
-                    "Exit");
+                    "0.Exit\n" +
+                    "Enter your choice:");
             choice = Integer.parseInt(scanner.nextLine());
             switch (choice) {
                 case 1:
@@ -21,9 +22,13 @@ public class DisplayGeometricTypes {
                     squareTriangle();
                     break;
                 case 3:
-                case 4:
-                    System.exit(0);
+                    isoscelesTriangle();
                     break;
+                case 0:
+                    System.exit(0);
+                default:
+                    System.out.println("No choice!");
+                    ;
             }
 
         }
@@ -83,7 +88,6 @@ public class DisplayGeometricTypes {
     }
 
 
-
     public static void topRight() {
         for (int i = 1; i < 6; i++) {
             for (int j = 1; j < i; j++) {
@@ -95,6 +99,7 @@ public class DisplayGeometricTypes {
             System.out.println("");
         }
     }
+
     public static void bottonLeft() {
         for (int i = 1; i < 6; i++) {
 
@@ -104,6 +109,7 @@ public class DisplayGeometricTypes {
             System.out.println("");
         }
     }
+
     public static void bottonRight() {
         for (int i = 1; i < 6; i++) {
 
@@ -116,12 +122,23 @@ public class DisplayGeometricTypes {
             System.out.println("");
         }
     }
-    public static void isoscelesTriangle(){
-        for (int i=1;i<7;i++){
-            for (int j=i;j<i;j++){
-                System.out.print("*");
 
+    public static void isoscelesTriangle() {
+
+        for (int i = 0; i < 6; i++) {
+            for (int k = 6; k > i; k--) {
+                System.out.print("  ");
             }
+
+            for (int j = 0; j < i; j++) {
+                System.out.print(" *");
+            }
+
+            for (int j = 0; j <= i; j++) {
+                System.out.print(" *");
+            }
+
+            System.out.println("");
         }
     }
 }
