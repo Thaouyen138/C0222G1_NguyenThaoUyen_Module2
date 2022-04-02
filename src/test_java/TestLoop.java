@@ -1,5 +1,7 @@
 package test_java;
 
+import java.util.Arrays;
+
 public class TestLoop {
     public static void main(String[] args) {
 
@@ -9,12 +11,12 @@ public class TestLoop {
 //            System.out.println(i);
 //            i++;
 //        }
-        int i = 10;
-        do {
-            System.out.println(i);
-            i++;
-        }
-        while (i < 5);
+//        int i = 10;
+//        do {
+//            System.out.println(i);
+//            i++;
+//        }
+//        while (i < 5);
 //        for (int i = 0; i < 10; i++) {
 //            if (i == 4) {
 //                break;
@@ -34,6 +36,7 @@ public class TestLoop {
 //        for (int i = 0; i <= 10; i = i + 2) {
 //            System.out.println(i);
 //        }
+
     }
 
 }

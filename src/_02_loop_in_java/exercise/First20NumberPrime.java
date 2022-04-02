@@ -33,7 +33,8 @@ public class First20NumberPrime {
 
 
             }
-            if (count == 2) {
+            if (count == 2)
+            {
                 System.out.println(num);
                 amount++;
             }
