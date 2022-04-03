@@ -30,8 +30,6 @@ public class First20NumberPrime {
                 if (num % i == 0) {
                     count++;
                 }
-
-
             }
             if (count == 2)
             {
