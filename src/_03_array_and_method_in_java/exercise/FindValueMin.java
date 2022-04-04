@@ -5,28 +5,23 @@ import java.util.Scanner;
 
 public class FindValueMin {
     public static void main(String[] args) {
-        Scanner scanner= new Scanner(System.in);
-
-        int size = -1;
-        do {
-            System.out.print("Enter a size:");
-            size =Integer.parseInt(scanner.nextLine());
-            if (size > 20)
-                System.out.println("Size should not exceed 20");
-        } while (size > 20);
-
-        int[] array = new int[size];
-        for (int i = 0; i < array.length; i++) {
-            System.out.println("Enter Element index "+i);
-            array[i] = Integer.parseInt(scanner.nextLine());
-        }
+        Scanner scanner = new Scanner(System.in);
+        int [] array={1,2,3,4,5,-6,33,-4};
         System.out.println(Arrays.toString(array));
+        findValueMin(array);
+    }
+    public static void findValueMin(int array[]){
+        int max=array[0];
         int min = array[0];
-        for (int i = 1; i < array.length; i++) {
+        for (int i = 0; i < array.length; i++) {
             if(min>array[i]){
                 min = array[i];
+            }else if (max<array[i]){
+                max=array[i];
             }
         }
         System.out.println("Value min in array :"+min);
+        System.out.println("Value min in array :"+max);
     }
 }
+// em làm thêm max ạ =)))

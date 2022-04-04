@@ -26,8 +26,8 @@ public class FindMaxElement {
             System.out.println("Array:"+ Arrays.toString(array));
             break;
         }
-        int max = array[0];
-        int index = 1;
+        int max = 0;
+        int index = 0;
         for (int j = 0; j < array.length; j++) {
             if (array[j] > max) {
                 max = array[j];

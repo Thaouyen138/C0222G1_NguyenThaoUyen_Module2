@@ -8,7 +8,10 @@ public class AccountCharString {
         System.out.println("Enter String");
         String str = scanner.nextLine();
         System.out.println("Enter char to account");
-
+        accountCharString(str);
+    }
+    public static void accountCharString(String str){
+        Scanner scanner=new Scanner(System.in);
         char ch = scanner.nextLine().charAt(0);
 
         int count = 0;

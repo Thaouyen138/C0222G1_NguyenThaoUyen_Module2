@@ -32,7 +32,7 @@ public class InversionIndexArray {
             array[j] = array[size - 1 - j];
             array[size - 1 - j] = temp;
         }
-
+//
         for (int j = 0; j < array.length; j++) {
             System.out.println("inversion in array");
             System.out.print(Arrays.toString(array));
