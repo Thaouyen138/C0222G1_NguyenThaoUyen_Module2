@@ -36,7 +36,15 @@ public class TestLoop {
 //        for (int i = 0; i <= 10; i = i + 2) {
 //            System.out.println(i);
 //        }
+//        int[] words = new int[10];
+//        words[0] =1;
+//        words[1] =1;
+//        words[2] = 2;
+//        System.out.println(words.length + "  " + words[0]);
+//
+//        System.out.println( Arrays.toString(words)); return arr;
+
+
 
     }
-
-}
+    }

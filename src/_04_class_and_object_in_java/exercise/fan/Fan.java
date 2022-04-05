@@ -1,21 +1,15 @@
 package _04_class_and_object_in_java.exercise.fan;
 
 public class Fan {
-    final static int SLOW=1;
-    final static int MEDIUM=2;
-    final static int FAST=3;
-    private int speed;
-    private boolean on;
-    private double radius;
-    private String collor;
+    final static int SLOW = 1;
+    final static int MEDIUM = 2;
+    final static int FAST = 3;
+    private int speed = SLOW;
+    private boolean on= false;
+    private double radius= 5.0;
+    private String collor= "blue";
 
     public Fan() {
-        this.speed=SLOW;
-        this.on=false;
-        this.radius=5.0;
-        this.collor="blue";
-
-
     }
 
     public Fan(int speed, boolean on, double radius, String collor) {
@@ -51,10 +45,13 @@ public class Fan {
 
     public void setOn(boolean on) {
         this.on = on;
+
     }
 
     public double getRadius() {
+
         return radius;
+
     }
 
     public void setRadius(double radius) {
@@ -68,14 +65,18 @@ public class Fan {
     public void setCollor(String collor) {
         this.collor = collor;
     }
-
+//phương thức trả về speed, color, và radius với chuỗi “fan is on”.
+    //Nếu quạt không ở trạng thái on, phương thức trả về color
+// , radius với chuỗi “fan is off”.
     @Override
     public String toString() {
-        return "Fan{" +
-                "speed=" + speed +
-                ", on=" + on +
-                ", radius=" + radius +
-                ", collor='" + collor + '\'' +
-                '}';
+        if (this.isOn()){
+            return "fan is on "+" speed : "+this.getSpeed()+" , color : "+this.getCollor()+
+                    " , radius : "+this.getRadius()
+                    + " , on : "+ this.isOn();
+        } else {
+            return "fan is off "+" color : "+this.getCollor()+" , radius : "+this.getRadius();
+
+        }
     }
 }
