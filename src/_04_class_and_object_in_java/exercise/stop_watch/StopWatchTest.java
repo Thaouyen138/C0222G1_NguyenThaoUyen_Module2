@@ -19,17 +19,17 @@ public class StopWatchTest {
         System.out.println(Arrays.toString(array));
         StopWatchTest ob = new StopWatchTest();
         StopWatch stopWatch = new StopWatch();
-
+        long a=  stopWatch.star();
+        System.out.println(a);
         System.out.println("Mảng ban đầu:");
         ob.printArray(array);
         ob.sort(array);
         System.out.println("Mảng sau khi sắp xếp:");
         ob.printArray(array);
 
-    long a=  stopWatch.star();
-        System.out.println(a);
-     long b= stopWatch.stop();
+        long b= stopWatch.stop();
         System.out.println(b);
+
 
         System.out.println("Time : " + (b-a));
     }
