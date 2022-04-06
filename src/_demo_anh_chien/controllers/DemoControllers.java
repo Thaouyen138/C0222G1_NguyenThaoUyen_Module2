@@ -30,10 +30,12 @@ public class DemoControllers {
                 case 2:
                     student.addStudent();
                     break;
-                case 3:student.delete();
-                break;
+                case 3:
+                    student.delete();
+                    break;
                 case 0:
-                    check=false;
+                    check = false;
+                    break;
                 default:
                     System.out.println("no choice");
             }

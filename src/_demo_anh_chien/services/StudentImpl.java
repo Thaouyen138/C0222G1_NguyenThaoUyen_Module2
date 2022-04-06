@@ -24,7 +24,7 @@ Scanner scanner=new Scanner(System.in);
         int age=Integer.parseInt(scanner.nextLine());
         System.out.print("enter address student:");
         String add=scanner.nextLine();
-        System.out.println("enter point student:");
+        System.out.print("enter point student:");
         float point=Float.parseFloat(scanner.nextLine());
         studentArrayList.add(new Student(name,age,add,point));
     }
@@ -34,8 +34,9 @@ Scanner scanner=new Scanner(System.in);
         System.out.println("enter name student to delelte");
         String name=scanner.nextLine();
         for(int i=0;i<studentArrayList.size();i++){
-        if (name.equals(studentArrayList.get(i).getName())){
+        if ((studentArrayList.get(i).getName()).contains(name)){
         studentArrayList.remove(i);
+        display();
         }
         }
     }
