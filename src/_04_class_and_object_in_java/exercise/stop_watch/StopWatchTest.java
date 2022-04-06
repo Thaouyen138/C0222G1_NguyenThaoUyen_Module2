@@ -26,11 +26,8 @@ public class StopWatchTest {
         ob.sort(array);
         System.out.println("Mảng sau khi sắp xếp:");
         ob.printArray(array);
-
         long b= stopWatch.stop();
         System.out.println(b);
-
-
         System.out.println("Time : " + (b-a));
     }
 
