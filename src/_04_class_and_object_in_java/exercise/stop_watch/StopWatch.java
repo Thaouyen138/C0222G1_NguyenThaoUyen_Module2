@@ -17,7 +17,7 @@ public class StopWatch {
         this.endTime = endTime;
     }
 
-    public void starTime() {
+    public void startTime() {
     }
 
     public long start() {
