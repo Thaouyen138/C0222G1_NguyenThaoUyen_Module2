@@ -6,18 +6,18 @@ import java.util.Scanner;
 public class QuadraticEquationTest{
     public static void main(String[] args) {
         Scanner scanner=new Scanner(System.in);
-        System.out.println("enter a:");
+        System.out.print("enter a:");
         double a=Double.parseDouble(scanner.nextLine());
-        System.out.println("enter b:");
+        System.out.print("enter b:");
         double b= Double.parseDouble(scanner.nextLine());
-        System.out.println("enter c:");
+        System.out.print("enter c:");
         double c=Double.parseDouble(scanner.nextLine());
         QuadraticEquation quadraticEquation =new QuadraticEquation(a,b,c);
-        System.out.println("denta:" +quadraticEquation.getDiscriminant());
-        if (quadraticEquation.getDiscriminant()==0){
+        double delta=quadraticEquation.getDiscriminant();
+        if (delta==0){
             System.out.print("roof:");
             System.out.println(quadraticEquation.getRoof());
-        }else if (quadraticEquation.getDiscriminant()>0) {
+        }else if (delta>0) {
             System.out.print("roof1:");
             System.out.println(quadraticEquation.getRoof1());
             System.out.print("roof2:");
