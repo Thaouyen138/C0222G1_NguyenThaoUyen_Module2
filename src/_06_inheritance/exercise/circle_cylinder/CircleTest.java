@@ -5,14 +5,14 @@ import java.util.Scanner;
 
 public class CircleTest {
     public static void main(String[] args) {
-        Scanner scanner=new Scanner(System.in);
-        Circle circle=new Circle();
+        Scanner scanner = new Scanner(System.in);
+        Circle circle = new Circle();
         System.out.println("enter radius");
-        double radius=Double.parseDouble(scanner.nextLine());
+        double radius = Double.parseDouble(scanner.nextLine());
         circle.setRadius(radius);
-
-        System.out.println("radius circle is : "+circle.getRadius());
-        System.out.println("get area is : "+circle.getArea());
+        DecimalFormat decimalFormat = new DecimalFormat("#.##");
+        System.out.println("radius circle is : " + circle.getRadius());
+        System.out.println("get area is : " + decimalFormat.format(circle.getArea()));
 
     }
 }

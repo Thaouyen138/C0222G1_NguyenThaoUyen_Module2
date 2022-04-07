@@ -7,16 +7,16 @@ public class Fan {
     private int speed = SLOW;
     private boolean on= false;
     private double radius= 5.0;
-    private String collor= "blue";
+    private String color = "blue";
 
     public Fan() {
     }
 
-    public Fan(int speed, boolean on, double radius, String collor) {
+    public Fan(int speed, boolean on, double radius, String color) {
         this.speed = speed;
         this.on = on;
         this.radius = radius;
-        this.collor = collor;
+        this.color = color;
     }
 
     public static int getSLOW() {
@@ -58,12 +58,12 @@ public class Fan {
         this.radius = radius;
     }
 
-    public String getCollor() {
-        return collor;
+    public String getColor() {
+        return color;
     }
 
-    public void setCollor(String collor) {
-        this.collor = collor;
+    public void setColor(String color) {
+        this.color = color;
     }
 //phương thức trả về speed, color, và radius với chuỗi “fan is on”.
     //Nếu quạt không ở trạng thái on, phương thức trả về color
@@ -71,11 +71,11 @@ public class Fan {
     @Override
     public String toString() {
         if (this.isOn()){
-            return "fan is on "+" speed : "+this.getSpeed()+" , color : "+this.getCollor()+
+            return "fan is on "+" speed : "+this.getSpeed()+" , color : "+this.getColor()+
                     " , radius : "+this.getRadius()
                     + " , on : "+ this.isOn();
         } else {
-            return "fan is off "+" color : "+this.getCollor()+" , radius : "+this.getRadius();
+            return "fan is off "+" color : "+this.getColor()+" , radius : "+this.getRadius();
 
         }
     }

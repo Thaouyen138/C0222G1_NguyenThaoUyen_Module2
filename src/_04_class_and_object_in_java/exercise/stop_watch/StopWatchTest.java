@@ -1,7 +1,6 @@
 package _04_class_and_object_in_java.exercise.stop_watch;
 
 import java.util.Arrays;
-import java.util.Random;
 
 public class StopWatchTest {
 
@@ -19,7 +18,7 @@ public class StopWatchTest {
         System.out.println(Arrays.toString(array));
         StopWatchTest ob = new StopWatchTest();
         StopWatch stopWatch = new StopWatch();
-        long a=  stopWatch.star();
+        long a=  stopWatch.start();
         System.out.println(a);
         System.out.println("Mảng ban đầu:");
         ob.printArray(array);

@@ -4,6 +4,10 @@ public class QuadraticEquation {
     private double a;
     private double b;
     private double c;
+    double delta;
+    double getRoof1;
+    double getRoof2;
+    double getRoof;
 
     public QuadraticEquation() {
     }
@@ -38,10 +42,7 @@ public class QuadraticEquation {
         this.c = c;
     }
 
-    double delta;
-    double getRoof1;
-    double getRoof2;
-    double getRoof;
+
 
     public double getDiscriminant() {
 

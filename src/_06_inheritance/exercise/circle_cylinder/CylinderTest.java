@@ -1,5 +1,6 @@
 package _06_inheritance.exercise.circle_cylinder;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class CylinderTest {
@@ -14,8 +15,8 @@ public class CylinderTest {
 
         cylinder.setRadius(radius);
         cylinder.setHeight(height);
-
-        System.out.println("get area volume: " + cylinder.getVolume());
+        DecimalFormat decimalFormat = new DecimalFormat("#.##");
+        System.out.println("get area volume: " + decimalFormat.format(cylinder.getVolume()));
     }
 
 }
