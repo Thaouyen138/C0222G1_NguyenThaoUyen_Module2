@@ -19,9 +19,9 @@ public class PointTest {
         point3D.setZ(z);
         point3D.setX(x);
         point3D.setY(y);
-        System.out.println("Array of " + Arrays.toString(point2D.getXY()));
+        System.out.println("Array  " + Arrays.toString(point2D.getXY()));
         System.out.println(point2D.toString());
-        System.out.println("Array of " + Arrays.toString(point3D.getXYZ()));
+        System.out.println("Array " + Arrays.toString(point3D.getXYZ()));
         System.out.println(point3D.toString());
 
 
