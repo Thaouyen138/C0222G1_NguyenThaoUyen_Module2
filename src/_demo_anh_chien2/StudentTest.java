@@ -3,7 +3,8 @@ package _demo_anh_chien2;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class StudentTest {
+public class
+StudentTest {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Student student1 = new Student();
