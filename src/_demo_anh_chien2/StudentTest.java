@@ -30,16 +30,6 @@ StudentTest {
                     }
                     break;
                 case 2:
-
-
-//        if (array[size] == null) {
-//        }
-//        student1.setName(name);
-//        student1.setAge(age);
-//        student1.setAddress(add);
-//        student1.setPoint(point);
-
-
                     for (int i = 0; i < size; i++) {
 
                         System.out.print("enter name student:");
@@ -53,35 +43,28 @@ StudentTest {
                         if (students[i] == null) {
                             students[i] = new Student(name, age, add, point);
                         }
-
-
                     }
-
-
                     break;
                 case 3:
                     System.out.println("Enter student to delete:");
                     String name = scanner.nextLine();
 
                     for (int i = 0; i < students.length; i++) {
-                        if (students[i].getName().equals(name)){
-                            for (int j=i;i<students.length-1;j++){
-                                students[j]=students[j+1];
-                            }students[students.length-1]=null;
+                        if (students[i].getName().equals(name)) {
+                            for (int j = i; i < students.length - 1; j++) {
+                                students[j] = students[j + 1];
+                            }
+                            students[students.length - 1] = null;
                         }
-
-
                     }
                     System.out.println(Arrays.toString(students));
-break;
-
-
+                    break;
                 case 0:
-                    check=false;
+                    check = false;
                     break;
                 default:
                     System.out.println("no choice!");
             }
-        }while (check);
+        } while (check);
     }
 }
