@@ -112,7 +112,7 @@ public class PersonTest {
             int point = Integer.parseInt(scanner.nextLine());
 //            if (students[i] == null) {
 //                students[i] = new Student(name, age, gender, point);
-            pe
+
             }
         }
 //    }

@@ -28,6 +28,6 @@ public class Circle extends Shape{
 
     @Override
     public void howToColor() {
-
+        System.out.print("Color all four sides1..");
     }
 }
