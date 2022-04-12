@@ -1,6 +1,6 @@
-package _07_abstract_and_interface.exercise.interface_resizeable;
+package _07_abstract_and_interface.exercise.interface_resizeble;
 
-public class Circle implements IResizeable {
+public class Circle extends Shape implements IResizeble {
     private  double radius;
 
     public Circle() {

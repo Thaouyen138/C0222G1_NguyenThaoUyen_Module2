@@ -1,4 +1,4 @@
-package _07_abstract_and_interface.exercise.interface_resizeable;
+package _07_abstract_and_interface.exercise.interface_resizeble;
 
 import java.util.Scanner;
 

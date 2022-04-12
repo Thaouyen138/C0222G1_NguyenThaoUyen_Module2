@@ -1,6 +1,6 @@
-package _07_abstract_and_interface.exercise.interface_resizeable;
+package _07_abstract_and_interface.exercise.interface_resizeble;
 
-public class Rectangle implements IResizeable {
+public class Rectangle extends Shape implements IResizeble {
     private  double height;
     private double width;
 

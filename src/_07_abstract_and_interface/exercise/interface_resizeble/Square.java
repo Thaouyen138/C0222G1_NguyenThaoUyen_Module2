@@ -1,6 +1,6 @@
-package _07_abstract_and_interface.exercise.interface_resizeable;
+package _07_abstract_and_interface.exercise.interface_resizeble;
 
-public class Square implements IResizeable {
+public class Square extends Shape implements IResizeble {
     private double side;
 
     public Square() {

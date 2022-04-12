@@ -1,8 +1,8 @@
 package _06_inheritance.exercise.point_2d_point_3d;
 
 public class Point2D {
-    private float x=0.0f;
-    private float y=0.0f;
+    private float x = 0.0f;
+    private float y = 0.0f;
 
     public Point2D() {
     }
@@ -27,15 +27,15 @@ public class Point2D {
     public void setY(float y) {
         this.y = y;
     }
-    public float[] getXY(){
 
-        return new float[]{this.getX(),this.getY()};
+    public float[] getXY() {
+
+        return new float[]{this.getX(), this.getY()};
     }
 
     @Override
-    public String
-    toString() {
+    public String toString() {
         return
-                "(" + x + ", " + y +")";
+                "(" + x + ", " + y + ")";
     }
 }
