@@ -36,7 +36,7 @@ public class Rectangle extends Shape implements IResizeble {
 
     @Override
     public void resize(double percent) {
-        setHeight(getHeight()*(1+percent));
-        setWidth(getWidth()*(1+percent));
+        this.setHeight(this.getHeight()*(1+percent));
+        this.setWidth(this.getWidth()*(1+percent));
     }
 }

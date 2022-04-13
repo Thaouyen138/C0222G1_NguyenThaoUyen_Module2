@@ -27,7 +27,9 @@ public class Circle extends Shape{
     }
 
     @Override
-    public void howToColor() {
-        System.out.print("Color all four sides1..");
+    public String toString() {
+        return "Circle{" +
+                "radius=" + radius +
+                '}';
     }
 }
