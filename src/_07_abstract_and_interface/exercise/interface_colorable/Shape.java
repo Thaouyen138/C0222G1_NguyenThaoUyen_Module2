@@ -2,6 +2,7 @@ package _07_abstract_and_interface.exercise.interface_colorable;
 
 public abstract class Shape {
     private  String color;
+    abstract double getArea();
 
     public Shape() {
     }

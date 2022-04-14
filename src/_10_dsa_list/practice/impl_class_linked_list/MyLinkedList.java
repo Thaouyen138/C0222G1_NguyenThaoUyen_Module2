@@ -1,13 +1,29 @@
 package _10_dsa_list.practice.impl_class_linked_list;
 
 public class MyLinkedList {
+    // head đối tượng lớp node
     private Node head;
+    // xác định số phần tử trong lớp node
     private int numNodes;
 
+    //constructor truyền data vào node
     public MyLinkedList(Object data) {
         head = new Node(data);
     }
+    //class Node
+    private class Node {
+        private Node next;
+        private final Object data;
+        //truyền data vào node
+        public Node(Object data) {
+            this.data = data;
+        }
 
+        public Object getData() {
+            return this.data;
+        }
+    }
+    //phương thức thêm vị trí và giá trị data
     public void add(int index, Object data) {
         Node temp = head;
         Node holder;
@@ -44,16 +60,5 @@ public class MyLinkedList {
         }
     }
 
-    private class Node {
-        private Node next;
-        private final Object data;
 
-        public Node(Object data) {
-            this.data = data;
-        }
-
-        public Object getData() {
-            return this.data;
-        }
-    }
 }
