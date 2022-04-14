@@ -45,17 +45,18 @@ public class TestLoop {
 //        System.out.println( Arrays.toString(words)); return arr;
 
         // Make a collection
-        ArrayList<String> cars = new ArrayList<String>();
-        cars.add("Volvo");
-        cars.add("BMW");
-        cars.add("Ford");
-        cars.add("Mazda");
+//        ArrayList<String> cars = new ArrayList<String>();
+//        cars.add("Volvo");
+//        cars.add("BMW");
+//.
+        String s = "hello";
+        char[] chars = s.toCharArray();
+        for (char c:chars
+             ) {
+            System.out.print(c);
 
-        // Get the iterator
-        Iterator<String> it = cars.iterator();
-
-        // Print the first item
-        System.out.println(it.next());
-
+        }
+        System.out.print( chars);
+        System.out.print(Arrays.toString(chars));
     }
-    }
+}

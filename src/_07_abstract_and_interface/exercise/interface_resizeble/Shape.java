@@ -1,7 +1,7 @@
 package _07_abstract_and_interface.exercise.interface_resizeble;
 
-public abstract class Shape {
-    private  String color;
+public abstract class Shape implements IResizeble{
+    private String color;
 
     public Shape() {
     }
@@ -17,6 +17,8 @@ public abstract class Shape {
     public void setColor(String color) {
         this.color = color;
     }
+
+    abstract double getArea();
 
     @Override
     public String toString() {
