@@ -6,14 +6,17 @@ public class AccountCharByMap {
     public static void main(String[] args) {
         String string = "hellouyennek";
         System.out.println(string.toUpperCase());
-        TreeMap<Integer, String> treeMap = new TreeMap();
-        int count = 0;
+        TreeMap<Character, Integer> treeMap = new TreeMap();
+
         for (int i = 0; i < string.length(); i++) {
-//            treeMap.containsKey();
-            count++;
+            if (!treeMap.containsKey(string.charAt(i))) {
+                treeMap.put(string.charAt(i),1);
+
+            } else {
+                treeMap.put(string.charAt(i),treeMap.get(string.charAt(i))+1);
+            }
+            }
+        System.out.println(treeMap);
+
         }
-        System.out.println(count);
-
-
     }
-}
