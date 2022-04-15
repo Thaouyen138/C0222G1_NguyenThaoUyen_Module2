@@ -16,7 +16,6 @@ public class CheckSymbol {
                     flag = false;
                     break;
                 } else {
-                    symStack.push(str.charAt(i));
 
                 }
             }
