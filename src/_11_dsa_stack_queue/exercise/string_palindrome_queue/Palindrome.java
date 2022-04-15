@@ -16,7 +16,7 @@ public class Palindrome {
         }
         String reverseString = "";
         while (!queue.isEmpty()) {
-            reverseString = reverseString + queue.remove();
+            reverseString += queue.remove();
         }
         if (string.equals(reverseString)) {
             System.out.println("String Palindrome");
