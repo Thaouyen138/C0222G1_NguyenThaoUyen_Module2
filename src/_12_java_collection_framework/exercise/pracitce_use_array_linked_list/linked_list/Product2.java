@@ -1,14 +1,14 @@
-package _12_java_collection_framework.exercise.pracitce_use_array_linked_list;
+package _12_java_collection_framework.exercise.pracitce_use_array_linked_list.linked_list;
 
-public class Product implements Comparable<Product> {
+public class Product2 implements Comparable<Product2> {
     private int id;
     private String nameProduct;
     private double price;
 
-    public Product() {
+    public Product2() {
     }
 
-    public Product(int id, String nameProduct, double price) {
+    public Product2(int id, String nameProduct, double price) {
         this.id = id;
         this.nameProduct = nameProduct;
         this.price = price;
@@ -47,16 +47,16 @@ public class Product implements Comparable<Product> {
                 '}';
     }
 
-
     @Override
-    public int compareTo(Product o) {
+    public int compareTo(Product2 o) {
         if (o.getPrice() > o.getPrice()) {
             return 1;
         } else if (o.getPrice() < getPrice()) {
             return -1;
         } else {
             return 0;
-
         }
     }
+
+
 }

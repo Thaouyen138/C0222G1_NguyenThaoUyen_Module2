@@ -1,17 +1,24 @@
 package _case_study_module2.controllers;
 
+import _case_study_module2.services.impl_interface.CustomerServicesImpl;
+import _case_study_module2.services.impl_interface.EmployeeServicesImpl;
+
 import java.util.Scanner;
 
 public class FuramaControllers {
     public static void main(String[] args) {
         displayMainMenu();
+        CustomerServicesImpl customerServices = new CustomerServicesImpl();
+        EmployeeServicesImpl employeeServices = new EmployeeServicesImpl();
     }
 
+
     public static void displayMainMenu() {
+
         Scanner scanner = new Scanner(System.in);
         boolean check = true;
         do {
-            System.out.println(" --------Menu-------- ");
+            System.err.println(" --------Menu-------- ");
             System.out.println("1.Employee Management");
             System.out.println("2.Customer Management");
             System.out.println("3.Facility Management");
@@ -47,6 +54,7 @@ public class FuramaControllers {
     }
 
     public static void employeeManagement() {
+        EmployeeServicesImpl employeeServices = new EmployeeServicesImpl();
         Scanner scanner = new Scanner(System.in);
         boolean check = true;
         do {
@@ -58,8 +66,14 @@ public class FuramaControllers {
             int choice = Integer.parseInt(scanner.nextLine());
             switch (choice) {
                 case 1:
+                    employeeServices.displayEm();
+                    break;
                 case 2:
+                    employeeServices.addEm();
+                    break;
                 case 3:
+                    employeeServices.editEm();
+                    break;
                 case 4:
                     check = false;
                     break;
@@ -70,6 +84,7 @@ public class FuramaControllers {
     }
 
     public static void customerManagement() {
+        CustomerServicesImpl customerServices = new CustomerServicesImpl();
         boolean check = true;
         Scanner scanner = new Scanner(System.in);
         do {
@@ -81,8 +96,14 @@ public class FuramaControllers {
             int choice = Integer.parseInt(scanner.nextLine());
             switch (choice) {
                 case 1:
+                    customerServices.displayCus();
+                    break;
                 case 2:
+                    customerServices.addCus();
+                    break;
                 case 3:
+                    customerServices.editCus();
+                    break;
                 case 4:
                     check = false;
                     break;
@@ -162,7 +183,7 @@ public class FuramaControllers {
                     System.out.println("no choice!");
             }
 
-        }while (check) ;
+        } while (check);
     }
 }
 

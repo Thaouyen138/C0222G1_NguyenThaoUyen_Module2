@@ -1,18 +1,21 @@
-package _12_java_collection_framework.exercise.pracitce_use_array_linked_list;
+package _12_java_collection_framework.exercise.pracitce_use_array_linked_list.linked_list;
 
-import java.util.*;
 
-public class ProductManager {
-    Product product = new Product();
-    List<Product> productList = new ArrayList<>();
-    Scanner scanner = new Scanner(System.in);
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Scanner;
+
+public class ProductManager2 {
+    Product2 product=new Product2();
+    Scanner scanner=new Scanner(System.in);
+    List<Product2> productList=new LinkedList<>();
 
     public void display() {
-        for (Product p : productList) {
+        for (Product2 p : productList) {
             System.out.println(p);
         }
     }
-
     public void add() {
         System.out.print("enter id product: ");
         int id = Integer.parseInt(scanner.nextLine());
@@ -20,10 +23,9 @@ public class ProductManager {
         String name = scanner.nextLine();
         System.out.print("enter price product: ");
         double price = Double.parseDouble(scanner.nextLine());
-        product = new Product(id, name, price);
+        product = new Product2(id, name, price);
         productList.add(product);
     }
-
     public void edit() {
         System.out.println("enter id to edit:");
         int id = Integer.parseInt(scanner.nextLine());
@@ -57,20 +59,11 @@ public class ProductManager {
                 productList.remove(i).getId();
             }
         }
-
     }
-
-    public void sortAscending() {
-        AscendingComparator ascendingComparator = new AscendingComparator();
-        Collections.sort(productList, ascendingComparator);
-        for (Product p : productList) {
-            System.out.println(p);
-        }
-    }
-    public void sortDescending() {
-        DescendingComparator descendingComparator = new DescendingComparator();
-        Collections.sort(productList, descendingComparator);
-        for (Product p : productList) {
+    public  void sort(){
+        Collections.sort(productList);
+        for (Product2 p:productList
+             ) {
             System.out.println(p);
         }
     }

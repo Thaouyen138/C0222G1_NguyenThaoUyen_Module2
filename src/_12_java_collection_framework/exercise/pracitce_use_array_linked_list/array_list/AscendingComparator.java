@@ -1,4 +1,4 @@
-package _12_java_collection_framework.exercise.pracitce_use_array_linked_list;
+package _12_java_collection_framework.exercise.pracitce_use_array_linked_list.array_list;
 
 import java.util.Comparator;
 
@@ -9,4 +9,5 @@ public class AscendingComparator implements Comparator<Product> {
         if (o1.getPrice() < o2.getPrice()) return -1;
         else return 0;
     }
+
 }
