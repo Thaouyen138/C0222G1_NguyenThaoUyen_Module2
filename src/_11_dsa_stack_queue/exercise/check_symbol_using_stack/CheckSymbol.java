@@ -7,7 +7,8 @@ public class CheckSymbol {
         Stack symStack = new Stack<>();
         String str = "s * (s – a) * (s – b * (s – c)";
         boolean flag = true;
-        for (int i = 0; i < str.length(); i++) {
+        for (int i = 0; i < str.length(); i++)
+        {
             if (str.charAt(i) == '(')
             {
                 symStack.push(str.charAt(i));
@@ -26,4 +27,4 @@ public class CheckSymbol {
         }
         System.out.println(symStack);
     }
-    }
+}

@@ -91,7 +91,7 @@ public class EmployeeServicesImpl implements IEmployeeServices {
                 System.out.println("position employee: ");
                 // //Vị trí sẽ lưu trữ các thông tin: Lễ tân, phục vụ, chuyên viên, giám sát, quản lý, giám đốc.
                 String position[] = {"0.Lễ tân", "1.phục vụ", "2.chuyên viên", "3.giám sát", "4.quản lý", "5.giám đốc"};
-                for (int k = 0; k< position.length; k++) {
+                for (int k = 0; k < position.length; k++) {
                     System.out.println(Arrays.toString(position));
                     break;
                 }
@@ -100,7 +100,7 @@ public class EmployeeServicesImpl implements IEmployeeServices {
                 employeeList.get(i).setPosition(position[index2]);
                 System.out.print("enter salary: ");
                 employeeList.get(i).setSalary(Double.parseDouble(scanner.nextLine()));
-            }else {
+            } else {
                 System.err.println("Employee name does not exist in the list!");
             }
         }

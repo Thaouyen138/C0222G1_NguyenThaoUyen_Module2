@@ -71,7 +71,7 @@ public class CustomerServicesImpl implements ICustomerServices {
                 String typeCus[] = {"0.Diamond", "1.Platinium", "2.Gold", "3.Silver", "4.Member"};
                 for (int j = 0; j < typeCus.length; i++) {
                     System.out.println(Arrays.toString(typeCus));
-               break;
+                    break;
                 }
                 System.out.print("enter type customer: ");
                 int index = Integer.parseInt(scanner.nextLine());

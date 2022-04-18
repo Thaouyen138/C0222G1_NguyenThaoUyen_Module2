@@ -5,8 +5,8 @@ import java.util.*;
 
 public class ManagerTest {
     public static void main(String[] args) {
-        Queue<Manager> NU = new LinkedList<>();
-        Queue<Manager> Nam = new LinkedList<>();
+        Queue<Manager> Female = new LinkedList<>();
+        Queue<Manager> Male = new LinkedList<>();
         Manager manager[] = new Manager[5];
         manager[0] = new Manager("uyen", true, 13);
         manager[1] = new Manager("uyen1", true, 17);
@@ -23,18 +23,18 @@ public class ManagerTest {
 
         for (Manager m2:manager){
             if (m2.getGender()){
-                NU.add(m2);
+                Female.add(m2);
             }else {
-                Nam.add(m2);
+                Male.add(m2);
             }
         }
         List<Manager> managerList=new ArrayList<>();
 
-        while (NU.size()>0){
-           managerList.add(NU.remove());
+        while (Female.size()>0){
+           managerList.add(Female.remove());
         }
-        while (Nam.size()>0){
-            managerList.add(Nam.remove());
+        while (Male.size()>0){
+            managerList.add(Male.remove());
         }
         System.out.println("danh sash sau khi cần đưuọc sắp xếp la:");
         Collections.sort(managerList);
