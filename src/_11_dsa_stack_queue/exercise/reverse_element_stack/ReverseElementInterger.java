@@ -10,8 +10,8 @@ public class ReverseElementInterger {
         Stack<Integer> stack = new Stack<>();
         int[] arr = {1, 2, 3, 4, 5};
         System.out.print("arr:");
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(stack.push(arr[i]));
+        for (int value : arr) {
+            System.out.print(stack.push(value));
         }
         System.out.println("");
         System.out.print(("arr reverse:"));

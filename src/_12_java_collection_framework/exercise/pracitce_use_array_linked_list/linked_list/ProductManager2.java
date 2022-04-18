@@ -35,6 +35,7 @@ public class ProductManager2 {
                 productList.get(i).setNameProduct(scanner.nextLine());
                 System.out.println("enter price product edit:");
                 productList.get(i).setPrice(Double.parseDouble(scanner.nextLine()));
+
             }
         }
     }

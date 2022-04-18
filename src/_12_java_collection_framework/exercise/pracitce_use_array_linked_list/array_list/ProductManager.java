@@ -38,7 +38,9 @@ public class ProductManager {
                 System.out.println("enter price product edit:");
                 productList.get(i).setPrice(Double.parseDouble(scanner.nextLine()));
             }
+            break;
         }
+
     }
 
     public void search() {
@@ -59,7 +61,9 @@ public class ProductManager {
         for (int i = 0; i < productList.size(); i++) {
             if (productList.get(i).getId() == id) {
                 productList.remove(i).getId();
+                break;
             }
+
         }
 
     }

@@ -8,13 +8,17 @@ public class CheckSymbol {
         String str = "s * (s – a) * (s – b * (s – c)";
         boolean flag = true;
         for (int i = 0; i < str.length(); i++) {
-            if (str.charAt(i) == '(') {
+            if (str.charAt(i) == '(')
+            {
                 symStack.push(str.charAt(i));
-                if (str.charAt(i) == ')') {
-                    if (symStack.isEmpty()) {
+                if (str.charAt(i) == ')')
+                {
+                    if (symStack.isEmpty())
+                    {
+                        flag = false;
+                        break;
                     }
-                    flag = false;
-                    break;
+
                 } else {
 
                 }

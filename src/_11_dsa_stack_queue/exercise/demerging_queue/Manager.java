@@ -1,15 +1,15 @@
 package _11_dsa_stack_queue.exercise.demerging_queue;
 
-public class Manager {
+public class Manager implements Comparable<Manager> {
     //Mỗi bản ghi gồm các trường: Họ tên, giới tính, ngày tháng năm sinh, ...
     String name;
-    String gender;
-    String birth;
+    Boolean gender = true;
+    int birth;
 
     public Manager() {
     }
 
-    public Manager(String name, String gender, String birth) {
+    public Manager(String name, Boolean gender, int birth) {
         this.name = name;
         this.gender = gender;
         this.birth = birth;
@@ -23,19 +23,19 @@ public class Manager {
         this.name = name;
     }
 
-    public String getGender() {
+    public Boolean getGender() {
         return gender;
     }
 
-    public void setGender(String gender) {
+    public void setGender(Boolean gender) {
         this.gender = gender;
     }
 
-    public String getBirth() {
+    public int  getBirth() {
         return birth;
     }
 
-    public void setBirth(String birth) {
+    public void setBirth(int birth) {
         this.birth = birth;
     }
 
@@ -46,6 +46,18 @@ public class Manager {
                 ", gender='" + gender + '\'' +
                 ", birth='" + birth + '\'' +
                 '}';
+
+    }
+
+    @Override
+    public int compareTo(Manager o) {
+        if (this.getBirth() > (o.getBirth())) {
+            return 1;
+        } else if (this.getBirth()<o.getBirth()) {
+            return -1;
+        } else {
+            return 0;
+        }
     }
 }
 

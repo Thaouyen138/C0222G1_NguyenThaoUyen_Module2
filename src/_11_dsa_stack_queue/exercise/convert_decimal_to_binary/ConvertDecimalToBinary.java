@@ -5,19 +5,19 @@ import java.util.Stack;
 
 public class ConvertDecimalToBinary {
     public static void main(String[] args) {
-        Scanner scanner=new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.println("enter number :");
-        int num=Integer.parseInt(scanner.nextLine());
-        Stack stack=new Stack();
-        while (num!=0){
-           stack.push(num%2);
-            num=num/2;
+        int num = Integer.parseInt(scanner.nextLine());
+        Stack<Integer> stack = new Stack<Integer>();
+        while (num != 0) {
+            stack.push(num % 2);
+            num = num / 2;
         }
         System.out.println(stack);
-        String str="";
-       while (!stack.isEmpty()){
-           str+=stack.pop();
-       }
+        StringBuilder str = new StringBuilder();
+        while (!stack.isEmpty()) {
+            str.append(stack.pop());
+        }
         System.out.println(str);
     }
 }

@@ -10,13 +10,13 @@ public class AccountCharByMap {
 
         for (int i = 0; i < string.length(); i++) {
             if (!treeMap.containsKey(string.charAt(i))) {
-                treeMap.put(string.charAt(i),1);
+                treeMap.put(string.charAt(i), 1);
 
             } else {
-                treeMap.put(string.charAt(i),treeMap.get(string.charAt(i))+1);
+                treeMap.put(string.charAt(i), treeMap.get(string.charAt(i)) + 1);
             }
-            }
+        }
         System.out.println(treeMap);
 
-        }
     }
+}
