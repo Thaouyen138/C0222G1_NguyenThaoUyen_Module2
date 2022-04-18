@@ -1,9 +1,6 @@
-package _13_sort_algorithm.exercise;
+package _13_search_algorithm.exercise;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Scanner;
 
 public class StringAscending {
