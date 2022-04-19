@@ -12,20 +12,17 @@ public class InsertionSortByStep {
         }
 
     }
-    //
-    //
-    //
 
     public static void insertSortByStep(int[] arr) {
         int x, y;
         for (int i = 1; i < arr.length; i++) {
-           // System.out.println("i=1,a=arr[1] => x=32 ");
+           // System.out.println("i=1,a=arr[1] => x bắt đầu 32 ");
             x = arr[i];
             y = i;
-          //  System.out.println("x <vị trí trước x:");
+            // y đứng trước x,y bắt đầu 23;
+          //x < y;
             while (y > 0 && x < arr[y - 1]) {
-
-             //   System.out.println("số bé hơn đưa ra trước:");
+                //nếu x bé hơn y;x đổi chỗ cho y
                 arr[y] = arr[y - 1];
                 y--;
             }
