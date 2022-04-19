@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class InsertionSortByStep {
     public static void main(String[] args) {
         System.out.print("mảng cần sắp xếp là: ");
-        int[] arr = {23, 32, 45, 72, 56, 78, 89, 54, 12};
+        int[] arr = {23,21, 32, 72, 56, 78, 89, 54, 12};
         insertSortByStep(arr);
         for (int a : arr) {
             System.out.print(a);

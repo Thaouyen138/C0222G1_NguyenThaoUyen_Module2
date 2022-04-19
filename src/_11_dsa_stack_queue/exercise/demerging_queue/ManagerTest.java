@@ -5,44 +5,36 @@ import java.util.*;
 
 public class ManagerTest {
     public static void main(String[] args) {
+        List<Manager> managerList = new ArrayList<>();
+        managerList.add(new Manager("uyen", true, 24));
+        managerList.add(new Manager("hao", false, 26));
+        managerList.add(new Manager("trug", false, 14));
+        managerList.add(new Manager("hoang", false, 30));
+        managerList.add(new Manager("mai", true, 27));
+        Collections.sort(managerList);
+
         Queue<Manager> Female = new LinkedList<>();
         Queue<Manager> Male = new LinkedList<>();
-        Manager manager[] = new Manager[5];
-        manager[0] = new Manager("uyen", true, 13);
-        manager[1] = new Manager("uyen1", true, 17);
-        manager[2] = new Manager("uyen2", false, 15);
-        manager[3] = new Manager("uyen3", true, 21);
-        manager[4] = new Manager("uyen4", false, 19);
-
-        System.out.println("danh sách được sắp xếp là:");
-
-        for (Manager m : manager) {
-            System.out.println(m.toString());
-            Arrays.sort(manager);
-        }
-
-        for (Manager m2:manager){
-            if (m2.getGender()){
+        for (Manager m2 : managerList) {
+            if (m2.getGender().equals(true)) {
                 Female.add(m2);
-            }else {
+            } else {
                 Male.add(m2);
             }
         }
-        List<Manager> managerList=new ArrayList<>();
-
-        while (Female.size()>0){
-           managerList.add(Female.remove());
+        for (int i = 0; i < managerList.size(); i++) {
+            managerList.set(0,Female.poll());
+            managerList.set(1,Female.poll());
+            managerList.set(2,Male.poll());
+            managerList.set(3,Male.poll());
+            managerList.set(4,Male.poll());
+            break;
         }
-        while (Male.size()>0){
-            managerList.add(Male.remove());
-        }
-        System.out.println("danh sash sau khi cần đưuọc sắp xếp la:");
-        Collections.sort(managerList);
-        for (Manager m3:managerList){
-            System.out.println(m3.toString());
 
-
+        for (Manager m:managerList){
+            System.out.println(m);
         }
+
 
     }
 }

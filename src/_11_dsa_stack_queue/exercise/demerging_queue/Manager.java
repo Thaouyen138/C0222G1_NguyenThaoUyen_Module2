@@ -1,7 +1,6 @@
 package _11_dsa_stack_queue.exercise.demerging_queue;
 
 public class Manager implements Comparable<Manager> {
-    //Mỗi bản ghi gồm các trường: Họ tên, giới tính, ngày tháng năm sinh, ...
     String name;
     Boolean gender = true;
     int birth;
