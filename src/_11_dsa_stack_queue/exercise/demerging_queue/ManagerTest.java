@@ -13,21 +13,21 @@ public class ManagerTest {
         managerList.add(new Manager("mai", true, 27));
         Collections.sort(managerList);
 
-        Queue<Manager> Female = new LinkedList<>();
-        Queue<Manager> Male = new LinkedList<>();
+        Queue<Manager> female = new LinkedList<>();
+        Queue<Manager> male = new LinkedList<>();
         for (Manager m2 : managerList) {
             if (m2.getGender()) {
-                Female.add(m2);
+                female.add(m2);
             } else {
-                Male.add(m2);
+                male.add(m2);
             }
         }
         for (int i = 0; i < managerList.size(); i++) {
-            managerList.set(0,Female.poll());
-            managerList.set(1,Female.poll());
-            managerList.set(2,Male.poll());
-            managerList.set(3,Male.poll());
-            managerList.set(4,Male.poll());
+            managerList.set(0,female.poll());
+            managerList.set(1,female.poll());
+            managerList.set(2,male.poll());
+            managerList.set(3,male.poll());
+            managerList.set(4,male.poll());
             break;
         }
 
