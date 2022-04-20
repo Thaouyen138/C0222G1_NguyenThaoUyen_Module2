@@ -42,10 +42,12 @@ public class ProductManager {
                 flag = false;
                 break;
             }
-        }if (flag){
+        }
+        if (flag) {
             System.out.println("No id in product");
 
-        }    }
+        }
+    }
 
 
     public void search() {
