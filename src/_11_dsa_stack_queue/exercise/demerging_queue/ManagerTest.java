@@ -16,7 +16,7 @@ public class ManagerTest {
         Queue<Manager> Female = new LinkedList<>();
         Queue<Manager> Male = new LinkedList<>();
         for (Manager m2 : managerList) {
-            if (m2.getGender().equals(true)) {
+            if (m2.getGender()) {
                 Female.add(m2);
             } else {
                 Male.add(m2);

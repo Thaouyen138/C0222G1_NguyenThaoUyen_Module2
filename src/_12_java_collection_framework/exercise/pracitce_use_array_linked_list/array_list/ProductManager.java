@@ -31,17 +31,22 @@ public class ProductManager {
     public void edit() {
         System.out.println("enter id to edit:");
         int id = Integer.parseInt(scanner.nextLine());
+        boolean flag = true;
         for (int i = 0; i < productList.size(); i++) {
             if (productList.get(i).getId() == id) {
                 System.out.println("enter name product edit:");
                 productList.get(i).setNameProduct(scanner.nextLine());
                 System.out.println("enter price product edit:");
                 productList.get(i).setPrice(Double.parseDouble(scanner.nextLine()));
+                System.out.println("add success");
+                flag = false;
+                break;
             }
-            break;
-        }
+        }if (flag){
+            System.out.println("No id in product");
 
-    }
+        }    }
+
 
     public void search() {
         System.out.println("enter name product to search");
@@ -75,6 +80,7 @@ public class ProductManager {
             System.out.println(p);
         }
     }
+
     public void sortDescending() {
         DescendingComparator descendingComparator = new DescendingComparator();
         Collections.sort(productList, descendingComparator);
