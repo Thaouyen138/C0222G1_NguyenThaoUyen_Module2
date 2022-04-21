@@ -1,4 +1,4 @@
-package _16_io_text_file.practice;
+package _16_io_text_file.practice.sum_of_number;
 
 import java.io.BufferedReader;
 import java.io.File;
