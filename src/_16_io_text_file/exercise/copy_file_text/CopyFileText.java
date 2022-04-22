@@ -4,8 +4,8 @@ import java.io.*;
 
 public class CopyFileText {
     public static void main(String[] args) {
-        File sourceFile =new File("src\\_16_io_text_file\\exercise\\copy_file_text\\SourceFile");
-        File targetFile =new File("src\\_16_io_text_file\\exercise\\copy_file_text\\TargetFile");
+        File sourceFile =new File("src\\_16_io_text_file\\exercise\\copy_file_text\\SourceFile.txt");
+        File targetFile =new File("src\\_16_io_text_file\\exercise\\copy_file_text\\TargetFile.txt");
         readFile(sourceFile);
         readFile(targetFile);
         try {
