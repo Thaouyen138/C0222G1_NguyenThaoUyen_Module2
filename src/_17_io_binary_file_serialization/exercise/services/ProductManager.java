@@ -10,8 +10,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class ProductManager implements IServices {
-   Product product =new Product();
-   List<Product> productList =new ArrayList<>();
+   List<Product> productList = readFileBinary("src\\_17_io_binary_file_serialization\\exercise\\utils\\Product.txt");
    Scanner scanner=new Scanner(System.in);
    
 
@@ -25,8 +24,8 @@ public class ProductManager implements IServices {
       String kan=scanner.nextLine();
       System.out.print("enter price product: ");
       double price=Double.parseDouble(scanner.nextLine());
-      product=new Product(id,name,kan,price);
-      productList.add(product);
+      productList.add(new Product(id,name,kan,price));
+      writerFileBinary("src\\_17_io_binary_file_serialization\\exercise\\utils\\Product.txt",productList);
    }
 
    @Override
@@ -49,7 +48,7 @@ public class ProductManager implements IServices {
          }
       }
    }
-   public static void writerFileBinary(String path, Object obj){
+   public static void writerFileBinary(String path, List<Product> obj){
       File file = new File(path);
       FileOutputStream os = null;
       ObjectOutputStream oos = null;
@@ -72,19 +71,17 @@ public class ProductManager implements IServices {
    }
 
 
-   public static Object readFileBinary(String path) {
+   public static List<Product> readFileBinary(String path) {
 
       File file = new File(path);
-      ObjectInputStream ois = null;
-      Object obj = null;
-      try (FileInputStream is = new FileInputStream(file)) {
-         ois = new ObjectInputStream(is);
-         obj = ois.readObject();
+     List<Product> obj;
+      try (FileInputStream is = new FileInputStream(file);
+         ObjectInputStream ois = new ObjectInputStream(is)){
+         obj = (List<Product>) ois.readObject();
          return obj;
       } catch (IOException | ClassNotFoundException e) {
-         e.printStackTrace();
+         return new ArrayList<>();
       }
-      return null;
    }
 
 }
