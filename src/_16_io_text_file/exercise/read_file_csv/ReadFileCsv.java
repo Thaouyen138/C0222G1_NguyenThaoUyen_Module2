@@ -29,11 +29,12 @@ public class ReadFileCsv {
     public static void main(String[] args) {
         List<String[]> strings = read("src\\_16_io_text_file\\exercise\\read_file_csv\\Country.csv");
         List<Country> countryList = new ArrayList<>();
+        
         for (String[] item : strings) {
             countryList.add(new Country(Integer.parseInt(item[0]), item[1], item[2]));
         }
-        for (Country item2 : countryList
-        ) {
+
+        for (Country item2 : countryList) {
             System.out.println(item2);
         }
     }
