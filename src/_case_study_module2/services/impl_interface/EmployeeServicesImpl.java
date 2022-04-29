@@ -1,9 +1,8 @@
 package _case_study_module2.services.impl_interface;
 
-import _case_study_module2.models.Employee;
+import _case_study_module2.models.person.Employee;
 import _case_study_module2.services.interface_services.IEmployeeServices;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -17,7 +16,7 @@ public class EmployeeServicesImpl implements IEmployeeServices {
     //String name, String dateOfBirth, String gender, String identity, String phone,
     // String email, String idEmployee, String level, String position, double salary) {
     @Override
-    public void addEm() {
+    public void add() {
 
 
         System.out.print("enter name employee: ");
@@ -58,7 +57,7 @@ public class EmployeeServicesImpl implements IEmployeeServices {
     }
 
     @Override
-    public void editEm() {
+    public void edit() {
         System.out.println("enter name employee to edit:");
         String name = scanner.nextLine();
         for (int i = 0; i < employeeList.size(); i++) {
@@ -90,7 +89,7 @@ public class EmployeeServicesImpl implements IEmployeeServices {
                 employeeList.get(i).setLevel(level[index]);
                 System.out.println("position employee: ");
                 // //Vị trí sẽ lưu trữ các thông tin: Lễ tân, phục vụ, chuyên viên, giám sát, quản lý, giám đốc.
-                String position[] = {"0.Lễ tân", "1.phục vụ", "2.chuyên viên", "3.giám sát", "4.quản lý", "5.giám đốc"};
+                String[] position = {"0.Lễ tân", "1.phục vụ", "2.chuyên viên", "3.giám sát", "4.quản lý", "5.giám đốc"};
                 for (int k = 0; k < position.length; k++) {
                     System.out.println(Arrays.toString(position));
                     break;
@@ -107,9 +106,8 @@ public class EmployeeServicesImpl implements IEmployeeServices {
     }
 
     @Override
-    public void displayEm() {
-        for (Employee e : employeeList
-        ) {
+    public void display() {
+        for (Employee e : employeeList) {
             System.out.println(e);
         }
     }

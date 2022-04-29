@@ -1,23 +1,20 @@
 package _case_study_module2.services.impl_interface;
 
-import _case_study_module2.models.Customer;
+import _case_study_module2.models.person.Customer;
 import _case_study_module2.services.interface_services.ICustomerServices;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
 public class CustomerServicesImpl implements ICustomerServices {
-    Customer customer = new Customer();
-    List<Customer> customerList = new LinkedList<>();
+    static Customer customer = new Customer();
+    static List<Customer> customerList = new LinkedList<>();
     Scanner scanner = new Scanner(System.in);
-    //String name, String dateOfBirth, String gender, String identity, String phone,
-    // String email, String idCustomer, String typeCustomer, String address) {
 
     @Override
-    public void addCus() {
+    public void add() {
         System.out.print("enter name customer: ");
         String name = scanner.nextLine();
         System.out.print("enter date  of birth customer: ");
@@ -31,7 +28,7 @@ public class CustomerServicesImpl implements ICustomerServices {
         System.out.print("enter email: ");
         String email = scanner.nextLine();
         System.out.print("enter id customer: ");
-        String idEmployee = scanner.nextLine();
+        String idCustomer = scanner.nextLine();
         System.out.println("type customer:");
         //: (Diamond, Platinium, Gold, Silver, Member
         String typeCus[] = {"Diamond", "Platinium", "Gold", "Silver", "Member"};
@@ -42,12 +39,12 @@ public class CustomerServicesImpl implements ICustomerServices {
         int index = Integer.parseInt(scanner.nextLine());
         System.out.print("enter address: ");
         String address = scanner.nextLine();
-        customer = new Customer(name, date, gender, identity, phone, email, idEmployee, typeCus[index], address);
+        customer = new Customer(name, date, gender, identity, phone, email, idCustomer, typeCus[index], address);
         customerList.add(customer);
     }
 
     @Override
-    public void editCus() {
+    public void edit() {
         System.out.print("enter name customer to edit:");
         String name = scanner.nextLine();
         for (int i = 0; i < customerList.size(); i++) {
@@ -84,7 +81,7 @@ public class CustomerServicesImpl implements ICustomerServices {
         }
     }
 
-    public void displayCus() {
+    public void display() {
         for (Customer c : customerList
         ) {
             System.out.println(c);

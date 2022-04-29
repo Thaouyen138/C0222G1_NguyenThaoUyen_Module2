@@ -1,6 +1,8 @@
-package _case_study_module2.models;
+package _case_study_module2.models.person;
 
-public class Customer extends Person{
+import _case_study_module2.models.person.Person;
+
+public class Customer extends Person {
     private String idCustomer;
     private String typeCustomer;
     private String address;

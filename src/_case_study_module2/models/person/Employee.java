@@ -1,6 +1,8 @@
-package _case_study_module2.models;
+package _case_study_module2.models.person;
 
-public class Employee extends Person{
+import _case_study_module2.models.person.Person;
+
+public class Employee extends Person {
     private String idEmployee;
     private String level;
     private String position;

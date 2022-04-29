@@ -1,6 +1,9 @@
-package _case_study_module2.models;
+package _case_study_module2.models.facility;
+
+import _case_study_module2.models.facility.Facility;
 
 public class Villa extends Facility {
+    private String codeServices;
     private String standardVilla;
     private double swimPoolArea;
     private int floorVilla;
@@ -8,19 +11,28 @@ public class Villa extends Facility {
     public Villa() {
     }
 
-    public Villa(String standardVilla, double swimPoolArea, int floorVilla) {
+    public Villa(String codeServices, String standardVilla, double swimPoolArea, int floorVilla) {
+        this.codeServices = codeServices;
         this.standardVilla = standardVilla;
         this.swimPoolArea = swimPoolArea;
         this.floorVilla = floorVilla;
     }
 
-    public Villa(String nameService, double areaUsed, double cost, int amountPeople, String typeRent, String standardVilla, double swimPoolArea, int floorVilla) {
+    public Villa(String nameService, double areaUsed, double cost, int amountPeople, String typeRent, String codeServices, String standardVilla, double swimPoolArea, int floorVilla) {
         super(nameService, areaUsed, cost, amountPeople, typeRent);
+        this.codeServices = codeServices;
         this.standardVilla = standardVilla;
         this.swimPoolArea = swimPoolArea;
         this.floorVilla = floorVilla;
     }
 
+    public String getCodeServices() {
+        return codeServices;
+    }
+
+    public void setCodeServices(String codeServices) {
+        this.codeServices = codeServices;
+    }
     public String getStandardVilla() {
         return standardVilla;
     }
@@ -50,7 +62,6 @@ public class Villa extends Facility {
         return super.toString()+
                 "standardVilla='" + standardVilla + '\'' +
                 ", swimPoolArea=" + swimPoolArea +
-                ", floorVilla=" + floorVilla +
-                '}';
+                ", floorVilla=" + floorVilla;
     }
 }

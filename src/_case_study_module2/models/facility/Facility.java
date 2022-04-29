@@ -1,4 +1,4 @@
-package _case_study_module2.models;
+package _case_study_module2.models.facility;
 
 import java.util.SplittableRandom;
 
@@ -65,12 +65,12 @@ public  abstract class Facility {
 
     @Override
     public String toString() {
-        return "Facility{" +
+        return
                 "nameService='" + nameService + '\'' +
                 ", areaUsed=" + areaUsed +
                 ", cost=" + cost +
                 ", amountPeople=" + amountPeople +
-                ", typeRent='" + typeRent + '\'' +
-                '}';
+                ", typeRent='" + typeRent + '\''
+               ;
     }
 }

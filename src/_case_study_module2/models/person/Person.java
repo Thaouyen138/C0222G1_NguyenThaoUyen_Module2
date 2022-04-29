@@ -1,4 +1,4 @@
-package _case_study_module2.models;
+package _case_study_module2.models.person;
 
 public abstract class Person {
     //Họ tên, Ngày sinh, Giới tính, Số CMND, Số Điện Thoại, Email,
