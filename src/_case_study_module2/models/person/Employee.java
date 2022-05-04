@@ -11,7 +11,15 @@ public class Employee extends Person {
     public Employee() {
     }
 
-    public Employee(String name, String dateOfBirth, String gender, String identity, String phone, String email, String idEmployee, String level, String position, double salary) {
+    public Employee(String idEmployee, String level, String position, double salary) {
+        this.idEmployee = idEmployee;
+        this.level = level;
+        this.position = position;
+        this.salary = salary;
+    }
+
+    public Employee(String name, String dateOfBirth, String gender, String identity, String phone,
+                    String email, String idEmployee, String level, String position, double salary) {
         super(name, dateOfBirth, gender, identity, phone, email);
         this.idEmployee = idEmployee;
         this.level = level;
@@ -59,5 +67,10 @@ public class Employee extends Person {
                 ", position='" + position + '\'' +
                 ", salary='" + salary+'\''
                 ;
+    }
+    //(String name, String dateOfBirth, String gender, String identity, String phone,
+    //                    String email, String idEmployee, String level, String position, double salary) {
+    public String stringToCsv(){
+        return getName()+","+getDateOfBirth()+","+getGender()+","+getIdentity()+","+getPhone()+","+getEmail()+","+getIdEmployee()+","+getLevel()+","+getPosition()+","+getSalary();
     }
 }

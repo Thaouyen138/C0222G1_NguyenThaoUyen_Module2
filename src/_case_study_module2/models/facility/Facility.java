@@ -73,4 +73,14 @@ public  abstract class Facility {
                 ", typeRent='" + typeRent + '\''
                ;
     }
+
+    public String stringToCsv(){
+        return nameService +","+
+                areaUsed +","+
+                cost +","+
+                amountPeople +","+
+                typeRent;
+
+    }
+
 }

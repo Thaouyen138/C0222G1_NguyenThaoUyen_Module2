@@ -30,7 +30,13 @@ public class Room extends Facility {
 
     @Override
     public String toString() {
-        return super.toString() +
-                "freeService='" + freeService + '\'';
+        return "Room{" +
+                "codeServices='" + codeServices + '\'' +
+                ", freeService='" + freeService + '\'' +
+                '}';
+    }
+
+    public String stringToCsv(){
+        return super.stringToCsv()+codeServices+","+freeService;
     }
 }

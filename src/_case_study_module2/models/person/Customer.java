@@ -9,6 +9,13 @@ public class Customer extends Person {
 
     public Customer() {
     }
+
+    public Customer(String idCustomer, String typeCustomer, String address) {
+        this.idCustomer = idCustomer;
+        this.typeCustomer = typeCustomer;
+        this.address = address;
+    }
+
     public Customer(String name, String dateOfBirth, String gender, String identity, String phone, String email, String idCustomer, String typeCustomer, String address) {
         super(name, dateOfBirth, gender, identity, phone, email);
         this.idCustomer = idCustomer;
@@ -47,5 +54,10 @@ public class Customer extends Person {
                 ", typeCustomer='" + typeCustomer + '\'' +
                 ", address='" + address + '\'' +
                 '}';
+    }
+
+    public String stringToCsv(){
+        return getName() + "," + getDateOfBirth() + "," + getGender() + "," + getIdentity() + ","+ getPhone() + ","+ getEmail() + ","+ getIdCustomer() + ","+ getTypeCustomer() + ","+ getAddress();
+
     }
 }
